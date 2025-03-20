@@ -1,10 +1,10 @@
 import os
 
 def exercicio1():
-    print("Python na escola de programaçao Alura")
+    print("Learning Python on Alura School of Programming")
     nome = "Chasseur"
     idade = 17
-    print (f"Meu nome e {nome} e minha idade e {idade}")
+    print (f"My name is {nome} and my age is {idade}")
     print(''' 
     A
     L
@@ -13,35 +13,35 @@ def exercicio1():
     A
     ''')
 def exercicio2():
-    numero = int(input("Digite um numero: "))
+    numero = int(input("Input a number: "))
     
     if numero % 2 == 0 :
-        print(f'O numero {numero} e par')
+        print(f'The number {numero} is even')
     else:
-        print(f'O numero {numero} e impar')
+        print(f'The number {numero} is odd')
 def exercicio3():
 
-    idade = int(input("Digite sua idade: "))
+    idade = int(input("Input your age: "))
     if idade <= 12:
-        print('criança')
+        print('Kid')
     if idade <=18 and idade >=13  :
-        print ('Adolescente')
+        print ('Teenager')
     if idade > 18:
-        print ('Adulto')
+        print ('Adult')
 def exercicio4():
-   Cx= int(input('Qual e a sua posiçao em X? '))
-   Cy= int(input('Qual e a sua posiçao em Y? '))
+   Cx= int(input('What is your X position? '))
+   Cy= int(input('What is your Y position? '))
 
    if Cx > 0 and Cy > 0:
-       print('Voce esta no Quadrante 1')
+       print('You are on square 1')
    elif Cx < 0 and Cy >0:
-       print('Voce esta no Quadrante 2')
+       print('You are on square 2')
    elif Cx < 0 and Cy <0:
-       print('Voce esta no Quadrante 3')
+       print('You are on square 3')
    elif Cx > 0 and Cy <0:
-       print('Voce esta no Quadrante 4')
+       print('You are on square 4')
    else:
-       print('Voce esta na Origem')
+       print('You are on the origin')
 def exercicio5():
     numero = [1,2,3,4,5,6,7,8,9,10]
 
@@ -87,7 +87,7 @@ def exercicio5():
             ''')
                 
 
-    opcao = int(input("Selecione uma opçao : "))
+    opcao = int(input("Select a option : "))
 
     if opcao == 1:
                         impares()
