@@ -17,6 +17,7 @@ class Restaurante:
         self.ativo = False
         Restaurante.restaurantes.append(self)
 
+#__str__ is a special method that shows variables of the object in text format
     def __str__(self):
         return f'{self.nome} | {self.categoria}'
     
@@ -40,6 +41,7 @@ Restaurante.listar_restaurantes()
 #
 # This shows the place where the object and it's variables are stored in the computer memory.
 # Unless we want a lot of ramdom symbols and numbers, it's not that useful...
+# HOWEVER, if we are using __str__ print(Pizzaria_Pepino) will work as we REALLY want
 #
 #print(dir(Pizzaria_Pepino)) 
 #
@@ -48,7 +50,8 @@ Restaurante.listar_restaurantes()
 #print(var(Pizzaria_Pepino)) 
 #
 # Shows a dictionary of properties and methods of this object. But, don't shows variables that
-# are received by the class of this object like "ativo" in this case
+# are received by the class of this object like "ativo" in this case. But, If the object comes from a 
+# constructor, all variables will be printed on the screen.
 #print(Pizzaria_Pepino.ativo)
 #
 # If we want to see an specific variable, that works well  
