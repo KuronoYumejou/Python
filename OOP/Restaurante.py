@@ -24,10 +24,12 @@ class Restaurante:
     def __str__(self): 
         return f'{self._nome} | {self._categoria}'
     
+    def change_status(self):
+        self._ativo = not self._ativo
 #To fix the str problem, we can create our own method to print every 
 #Object inside the dictionary with their variables
-
-    def listar_restaurantes(): 
+    @classmethod
+    def listar_restaurantes(cls): 
         for restaurante in Restaurante.restaurantes :
           print (f'{restaurante._nome} | {restaurante._categoria} | {restaurante.ativo}')
     
@@ -41,6 +43,7 @@ class Restaurante:
 # Sonic_Lanches = Restaurante()
 Pizzaria_Pepino = Restaurante('Pizzaria Pepino', 'Italian')
 Sonic_Lanches = Restaurante('Sonic Lanches', 'Fast Food')
+Restaurante.change_status(Sonic_Lanches)
 YugiYoyo_Chines = Restaurante ('Yugi Yoyo', 'Chinese')
 
 restaurantes = {Pizzaria_Pepino, Sonic_Lanches, YugiYoyo_Chines}
