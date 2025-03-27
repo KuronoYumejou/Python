@@ -8,30 +8,40 @@ class Restaurante:
     # self
     #  
     # Since a Class is associated with multiples instances, Self is used to differentiate that instances
-    # But, "self" don't need to be added as a variable of any object (Since "Self" IS the object)
+    # But, "self" don't need to be added as a variable of any object (Since "Self" IS the object). And, Self
+    # is just "python default", you can substitute "self" by anything you want (if the word is not reserved)
+    # But, in python, we should always use "self"
 
     def __init__(self, nome, categoria): 
 
-        self.nome = nome
-        self.categoria = categoria
-        self.ativo = False
-        Restaurante.restaurantes.append(self)
+        self._nome = nome.title() #Title make all first letters be upper case letters
+        self._categoria = categoria.upper() #Make all letters in a word uppercase letters.
+        self._ativo = False #"_" Create a protected variable type
+        Restaurante.restaurantes.append(self) #To append each self variable inside the dictionary
 
 #__str__ is a special method that shows variables of the object in text format
-    def __str__(self):
-        return f'{self.nome} | {self.categoria}'
+#The disavantage of str, is that it can print just one object
+    def __str__(self): 
+        return f'{self._nome} | {self._categoria}'
     
-    def listar_restaurantes():
+#To fix the str problem, we can create our own method to print every 
+#Object inside the dictionary with their variables
+
+    def listar_restaurantes(): 
         for restaurante in Restaurante.restaurantes :
-          print (f'{restaurante.nome} | {restaurante.categoria} | {restaurante.ativo}')
+          print (f'{restaurante._nome} | {restaurante._categoria} | {restaurante.ativo}')
     
+    @property
+    def ativo(self):
+        return 'Ativo' if self._ativo else 'Inativo'
+        
 # Pizzaria_Pepino = Restaurante()
 # Pizzaria_Pepino.nome = 'Pizzaria Pepino'
-# Pizzaria_Pepino.categoria = 'Italiana'
+# Pizzaria_Pepino.categoria = 'Italian'
 # Sonic_Lanches = Restaurante()
-Pizzaria_Pepino = Restaurante('Pizzaria Pepino', 'Italiana')
+Pizzaria_Pepino = Restaurante('Pizzaria Pepino', 'Italian')
 Sonic_Lanches = Restaurante('Sonic Lanches', 'Fast Food')
-YugiYoyo_Chines = Restaurante ('Yugi Yoyo', 'Chinesa')
+YugiYoyo_Chines = Restaurante ('Yugi Yoyo', 'Chinese')
 
 restaurantes = {Pizzaria_Pepino, Sonic_Lanches, YugiYoyo_Chines}
 
@@ -41,7 +51,7 @@ Restaurante.listar_restaurantes()
 #
 # This shows the place where the object and it's variables are stored in the computer memory.
 # Unless we want a lot of ramdom symbols and numbers, it's not that useful...
-# HOWEVER, if we are using __str__ print(Pizzaria_Pepino) will work as we REALLY want
+# HOWEVER, if we are using "__str__", then print(Pizzaria_Pepino) will work as we want
 #
 #print(dir(Pizzaria_Pepino)) 
 #
