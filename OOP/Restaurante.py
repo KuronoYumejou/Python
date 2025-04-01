@@ -41,14 +41,14 @@ class Restaurante:
 # Pizzaria_Pepino.nome = 'Pizzaria Pepino'
 # Pizzaria_Pepino.categoria = 'Italian'
 # Sonic_Lanches = Restaurante()
-Pizzaria_Pepino = Restaurante('Pizzaria Pepino', 'Italian')
-Sonic_Lanches = Restaurante('Sonic Lanches', 'Fast Food')
-Restaurante.change_status(Sonic_Lanches)
-YugiYoyo_Chines = Restaurante ('Yugi Yoyo', 'Chinese')
+#Pizzaria_Pepino = Restaurante('Pizzaria Pepino', 'Italian')
+#Sonic_Lanches = Restaurante('Sonic Lanches', 'Fast Food')
+#Restaurante.change_status(Sonic_Lanches)
+#YugiYoyo_Chines = Restaurante ('Yugi Yoyo', 'Chinese')
 
-restaurantes = {Pizzaria_Pepino, Sonic_Lanches, YugiYoyo_Chines}
+#restaurantes = {Pizzaria_Pepino, Sonic_Lanches, YugiYoyo_Chines}
 
-Restaurante.listar_restaurantes()
+#Restaurante.listar_restaurantes()
 
 #print(restaurantes) / print(Pizzaria_Pepino)  
 #
