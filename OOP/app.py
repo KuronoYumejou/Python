@@ -7,11 +7,13 @@ YugiYoyo_Chines = Restaurante ('Yugi Yoyo', 'Chinese')
 restaurantes = {Pizzaria_Pepino, Sonic_Lanches, YugiYoyo_Chines}
 
 Restaurante.change_status(Sonic_Lanches)
-Restaurante.listar_restaurantes()
+Restaurante.receive_rating('Rocketman', 8.0)
+Restaurante.receive_rating('Pizza Guy', 5.5)
+
 
 
 def main():
-    pass
+    Restaurante.listar_restaurantes()
 
 if __name__ == '__main__':
     main()

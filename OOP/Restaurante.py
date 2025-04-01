@@ -1,3 +1,5 @@
+from OOP.rating import Rating
+
 class Restaurante:
     restaurantes = []
     #__Init__ 
@@ -17,6 +19,7 @@ class Restaurante:
         self._nome = nome.title() #Title make all first letters be upper case letters
         self._categoria = categoria.upper() #Make all letters in a word uppercase letters.
         self._ativo = False #"_" Create a protected variable type
+        self._rating = []
         Restaurante.restaurantes.append(self) #To append each self variable inside the dictionary
 
 #__str__ is a special method that shows variables of the object in text format
@@ -26,6 +29,10 @@ class Restaurante:
     
     def change_status(self):
         self._ativo = not self._ativo
+
+    def receive_rating(self, client, rate):
+        ratings = Rating(client, rate )
+        self._rating.append
 #To fix the str problem, we can create our own method to print every 
 #Object inside the dictionary with their variables
     @classmethod
@@ -36,7 +43,15 @@ class Restaurante:
     @property
     def ativo(self):
         return 'Ativo' if self._ativo else 'Inativo'
+    
+    def total_rating(self):
+        if not self._rating:
+            return 0
         
+        total_sum = sum(rating._nota for rating in self._rating)
+        rating_amount =  len(self._rating)
+        media = round(total_sum/rating_amount,1)
+        return media
 # Pizzaria_Pepino = Restaurante()
 # Pizzaria_Pepino.nome = 'Pizzaria Pepino'
 # Pizzaria_Pepino.categoria = 'Italian'
