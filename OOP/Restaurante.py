@@ -44,6 +44,7 @@ class Restaurante:
     def ativo(self):
         return 'Ativo' if self._ativo else 'Inativo'
     
+    @property
     def total_rating(self):
         if not self._rating:
             return 0

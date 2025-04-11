@@ -1,5 +1,5 @@
 class Rating:
 
-    def __init__ (self, name, rating):
-        self.name = name
-        self.rating = rating
+    def __init__ (self, client, rate):
+        self.client = client
+        self.rating = rate
